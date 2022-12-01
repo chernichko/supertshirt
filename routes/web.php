@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/catalog', [ProductsController::class, 'index']);
+Route::get('/catalog/product', [ProductsController::class, 'product']);
 Route::get('/cart', [CartController::class, 'index']);
 Route::get('/order', [OrdersController::class, 'index']);
 Route::get('/myorder', [OrdersController::class, 'index']); //???
