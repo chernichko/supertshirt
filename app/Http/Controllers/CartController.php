@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class CartController
+class CartController extends Controller
 {
 
     public function index(){
