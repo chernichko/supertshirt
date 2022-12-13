@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
@@ -17,20 +18,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [Controller::class, 'index']);
-Route::get('/catalog', [ProductsController::class, 'index']);
-Route::get('/catalog/product', [ProductsController::class, 'product']);
+Route::middleware(['auth'])->group(function ($route) {
+    $route->get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+
+Route::get('/', [HomeController::class, 'index']);
+
+
+Route::controller(ProductsController::class)
+    ->prefix('catalog')
+    ->name('catalog.')
+    ->group(function ($route) {
+        $route->get('/', 'index')->name('index');
+        $route->get('/product', 'product')->name('product');
+    });
+
+
+//TODO:
+//Cart
+//1. сделать через group
+//2. Методы (list/add/delete/update/create-order)
 Route::get('/cart', [CartController::class, 'index']);
+//TODO:
+//Order
+//1. сделать через group
+//2. Методы (list/detail/delete/update)
 Route::get('/order', [OrdersController::class, 'index']);
-Route::get('/myorder', [OrdersController::class, 'index']); //???
 

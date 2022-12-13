@@ -62,11 +62,11 @@
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section-bold mb-4 mt-md-5">
                     <div class="ml-md-0">
-                        <h2 class="mb-4">Better Way to Ship Your Products</h2>
+                        <h2 class="mb-4">{{__('static.home.block-1.title', ['someValue' => 'NTRDSDASDDSADASD&A&DA&SD'], 'ru')}}</h2>
                     </div>
                 </div>
                 <div class="pb-md-5">
-                    <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                    <p>{{__('static.home.block-1.text', [], 'ru')}}</p>
                     <div class="row ftco-services">
                         <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
                             <div class="media block-6 services">

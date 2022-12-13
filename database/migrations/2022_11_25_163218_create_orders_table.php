@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,8 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->integer('summa');
             $table->timestamps();
+            $table->softDeletes();
+            //TODO: foreign id для user_id
         });
     }
 
