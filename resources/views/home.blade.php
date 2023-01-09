@@ -13,13 +13,13 @@
                     </div>
                     <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
-                            <span class="subheading">Winkel eCommerce Shop</span>
+                            <span class="subheading">{{__('static.home.slider-1.subtitle')}}</span>
                             <div class="horizontal">
-                                <h3 class="vr" style="background-image: url(images/divider.jpg);">Stablished Since 2000</h3>
-                                <h1 class="mb-4 mt-3">Catch Your Own <br><span>Stylish &amp; Look</span></h1>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+                                <h3 class="vr" style="background-image: url(images/divider.jpg);">{{__('static.home.slider-1.vertical-text')}}</h3>
+                                <h1 class="mb-4 mt-3">{!! __('static.home.slider-1.title') !!}</h1>
+                                <p>{{__('static.home.slider-1.text')}}</p>
 
-                                <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Discover Now</a></p>
+                                <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">{{__('static.home.slider-1.button')}}</a></p>
                             </div>
                         </div>
                     </div>
@@ -35,13 +35,13 @@
                     </div>
                     <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                         <div class="text">
-                            <span class="subheading">Winkel eCommerce Shop</span>
+                            <span class="subheading">{{__('static.home.slider-2.subtitle')}}</span>
                             <div class="horizontal">
-                                <h3 class="vr" style="background-image: url(images/divider.jpg);">Best eCommerce Online Shop</h3>
-                                <h1 class="mb-4 mt-3">A Thouroughly <span>Modern</span> Woman</h1>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+                                <h3 class="vr" style="background-image: url(images/divider.jpg);">{{__('static.home.slider-2.vertical-text')}}</h3>
+                                <h1 class="mb-4 mt-3">{!! __('static.home.slider-2.title') !!}</h1>
+                                <p>{{__('static.home.slider-2.text')}}</p>
 
-                                <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
+                                <p><a href="#" class="btn btn-primary px-5 py-3 mt-3">{{__('static.home.slider-2.button')}}</a></p>
                             </div>
                         </div>
                     </div>
@@ -62,11 +62,11 @@
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section-bold mb-4 mt-md-5">
                     <div class="ml-md-0">
-                        <h2 class="mb-4">{{__('static.home.block-1.title', ['someValue' => 'NTRDSDASDDSADASD&A&DA&SD'], 'ru')}}</h2>
+                        <h2 class="mb-4">{{__('static.home.block-1.title')}}</h2>
                     </div>
                 </div>
                 <div class="pb-md-5">
-                    <p>{{__('static.home.block-1.text', [], 'ru')}}</p>
+                    <p>{{__('static.home.block-1.text')}}</p>
                     <div class="row ftco-services">
                         <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
                             <div class="media block-6 services">
@@ -74,8 +74,8 @@
                                     <span class="flaticon-002-recommended"></span>
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="heading">Refund Policy</h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                    <h3 class="heading">{{__('static.home.block-1.sub-block-1.title')}}</h3>
+                                    <p>{{__('static.home.block-1.sub-block-1.text')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -85,8 +85,8 @@
                                     <span class="flaticon-001-box"></span>
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="heading">Premium Packaging</h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                    <h3 class="heading">{{__('static.home.block-1.sub-block-3.title')}}</h3>
+                                    <p>{{__('static.home.block-1.sub-block-3.text')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -96,8 +96,8 @@
                                     <span class="flaticon-003-medal"></span>
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="heading">Superior Quality</h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                                    <h3 class="heading">{{__('static.home.block-1.sub-block-3.title')}}</h3>
+                                    <p>{{__('static.home.block-1.sub-block-3.text')}}</p>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +112,8 @@
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3">
             <div class="col-md-12 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Best Sellers</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                <h2 class="mb-4">{{__('static.home.bestsellers-block.title')}}</h2>
+                <p>{{__('static.home.bestsellers-block.description')}}</p>
             </div>
         </div>
     </div>
@@ -244,9 +244,9 @@
             </div>
             <div class="col-md-4 py-md-5 ftco-animate">
                 <div class="text py-3 py-md-5">
-                    <h2 class="mb-4">New Women's Clothing Summer Collection 2019</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-white px-4 py-3">Shop now</a></p>
+                    <h2 class="mb-4">{{__('static.home.block-2.women-part.title')}}</h2>
+                    <p>{{__('static.home.block-2.women-part.text')}}</p>
+                    <p><a href="#" class="btn btn-white px-4 py-3">{{__('static.home.block-2.women-part.button')}}</a></p>
                 </div>
             </div>
         </div>
@@ -257,9 +257,9 @@
             </div>
             <div class="col-md-7 py-3 py-md-5 ftco-animate">
                 <div class="text text-2 py-md-5">
-                    <h2 class="mb-4">New Men's Clothing Summer Collection 2019</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-white px-4 py-3">Shop now</a></p>
+                    <h2 class="mb-4">{{__('static.home.block-2.men-part.title')}}</h2>
+                    <p>{{__('static.home.block-2.men-part.text')}}</p>
+                    <p><a href="#" class="btn btn-white px-4 py-3">{{__('static.home.block-2.men-part.button')}}</a></p>
                 </div>
             </div>
         </div>
@@ -270,8 +270,8 @@
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3">
             <div class="col-md-12 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Products</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                <h2 class="mb-4">{{__('static.home.products-block.title')}}</h2>
+                <p>{{__('static.home.products-block.description')}}</p>
             </div>
         </div>
     </div>
@@ -441,8 +441,8 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate">
-                <h2 class="mb-4">Our satisfied customer says</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                <h2 class="mb-4">{{ __('static.home.reviews-block.title') }}</h2>
+                <p>{{ __('static.home.reviews-block.description') }}</p>
             </div>
         </div>
         <div class="row ftco-animate">
@@ -530,13 +530,13 @@
         <div class="container">
             <div class="row d-flex justify-content-center py-5">
                 <div class="col-md-7 text-center heading-section ftco-animate">
-                    <h2>Subcribe to our Newsletter</h2>
+                    <h2>{{ __('static.home.subcribe-block.title') }}</h2>
                     <div class="row d-flex justify-content-center mt-5">
                         <div class="col-md-8">
                             <form action="#" class="subscribe-form">
                                 <div class="form-group d-flex">
-                                    <input type="text" class="form-control" placeholder="Enter email address">
-                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                    <input type="text" class="form-control" placeholder="{{ __('static.home.subcribe-block.input-text') }}">
+                                    <input type="submit" value="{{ __('static.home.subcribe-block.button') }}" class="submit px-3">
                                 </div>
                             </form>
                         </div>
