@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
@@ -58,6 +59,14 @@ Route::controller(OrderController::class)
         $route->get('/detail', 'add')->name('detailOrder');
         $route->get('/update', 'update')->name('updateOrder');
         $route->get('/delete', 'delete')->name('deleteOrder');
+    });
+
+Route::controller(BlogController::class)
+    ->prefix('blog')
+    ->name('blog.')
+    ->group(function ($route) {
+        $route->get('/', 'index')->name('index');
+        $route->get('/single', 'single')->name('singleBlog');
     });
 
 
