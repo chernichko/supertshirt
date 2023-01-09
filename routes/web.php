@@ -3,7 +3,7 @@
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,15 +39,36 @@ Route::controller(ProductsController::class)
         $route->get('/product', 'product')->name('product');
     });
 
+Route::controller(CartController::class)
+    ->prefix('cart')
+    ->name('cart.')
+    ->group(function ($route) {
+        $route->get('/', 'index')->name('index');
+        $route->get('/add', 'add')->name('addCart');
+        $route->get('/delete', 'delete')->name('deleteCart');
+        $route->get('/create-order', 'createOrder')->name('createOrder');
+    });
+
+Route::controller(OrderController::class)
+    ->prefix('order')
+    ->name('order.')
+    ->group(function ($route) {
+        $route->get('/', 'index')->name('index');
+        $route->get('/list', 'list')->name('listOrder');
+        $route->get('/detail', 'add')->name('detailOrder');
+        $route->get('/update', 'update')->name('updateOrder');
+        $route->get('/delete', 'delete')->name('deleteOrder');
+    });
+
 
 //TODO:
 //Cart
 //1. сделать через group
 //2. Методы (list/add/delete/update/create-order)
-Route::get('/cart', [CartController::class, 'index']);
+//Route::get('/cart', [CartController::class, 'index']);
 //TODO:
 //Order
 //1. сделать через group
 //2. Методы (list/detail/delete/update)
-Route::get('/order', [OrdersController::class, 'index']);
+//Route::get('/order', [OrderController::class, 'index']);
 
