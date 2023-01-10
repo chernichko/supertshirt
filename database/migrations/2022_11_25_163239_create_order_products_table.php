@@ -15,10 +15,12 @@ class CreateOrderProductsTable extends Migration
     {
         Schema::create('order_products', function (Blueprint $table) {
             $table->id();
-            $table->integer('order_id');
-            $table->integer('product_id');
+            $table->integer('order_id')->index();
+            $table->integer('product_id')->index();
+            $table->integer('count');
             //TODO: Добавить поле с количеством, добавить индексы на order_id, product_id + составной индекс (order_id, product_id)
             $table->timestamps();
+            $table->index(['order_id', 'product_id']); // unique ??
         });
     }
 
