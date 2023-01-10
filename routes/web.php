@@ -36,8 +36,12 @@ Route::controller(ProductsController::class)
     ->prefix('catalog')
     ->name('catalog.')
     ->group(function ($route) {
-        $route->get('/', 'index')->name('index');
-        $route->get('/product', 'product')->name('product');
+        $route
+            ->get('/', 'index')
+            ->name('index');
+        $route
+            ->get('/{productModel}', 'product')
+            ->name('product');
     });
 
 Route::controller(CartController::class)
@@ -61,13 +65,13 @@ Route::controller(OrderController::class)
         $route->get('/delete', 'delete')->name('deleteOrder');
     });
 
-Route::controller(BlogController::class)
-    ->prefix('blog')
-    ->name('blog.')
-    ->group(function ($route) {
-        $route->get('/', 'index')->name('index');
-        $route->get('/single', 'single')->name('singleBlog');
-    });
+//Route::controller(BlogController::class)
+//    ->prefix('blog')
+//    ->name('blog.')
+//    ->group(function ($route) {
+//        $route->get('/', 'index')->name('index');
+//        $route->get('/single', 'single')->name('singleBlog');
+//    });
 
 
 //TODO:

@@ -22,7 +22,7 @@
                     <a href="/images/menu-2.jpg" class="image-popup"><img src="/images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
                 </div>
                 <div class="col-lg-6 product-details pl-md-5 ftco-animate">
-                    <h3>Young Woman Wearing Dress</h3>
+                    <h3>{{$product->name}}</h3>
                     <div class="rating d-flex">
                         <p class="text-left mr-4">
                             <a href="#" class="mr-2">5.0</a>
