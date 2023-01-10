@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\UserModel;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +16,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->integer('summa');
             $table->timestamps();
             $table->softDeletes();
