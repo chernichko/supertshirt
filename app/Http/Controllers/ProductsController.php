@@ -30,9 +30,9 @@ class ProductsController extends Controller
 //            'price' => 100.00
 //        ]);
 
-        dd(session('cart')
-            ->sum(fn($item) => $item['count'] * $item['price'])
-        );
+//        dd(session('cart')
+//            ->sum(fn($item) => $item['count'] * $item['price'])
+//        );
 
         return view('products.index', compact('products'));
     }
