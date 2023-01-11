@@ -18,10 +18,5 @@ class ProductSeeder extends Seeder
     {
         //TODO: fix it!
         ProductModel::factory()->count(10)->create();
-
-        // Error Class 'Database\Seeders\Product' not found
-        // Class 'Database\Factories\ProductModelFactory' not found
-
-
     }
 }
