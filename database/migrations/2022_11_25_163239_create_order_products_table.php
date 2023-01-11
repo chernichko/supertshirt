@@ -20,7 +20,7 @@ class CreateOrderProductsTable extends Migration
             $table->integer('count');
             //TODO: Добавить поле с количеством, добавить индексы на order_id, product_id + составной индекс (order_id, product_id)
             $table->timestamps();
-            $table->index(['order_id', 'product_id']); // unique ??
+            $table->index(['order_id', 'product_id']);
         });
     }
 
