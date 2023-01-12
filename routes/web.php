@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::middleware(['auth'])->group(function ($route) {
     $route->get('/dashboard', function () {
@@ -65,13 +65,13 @@ Route::controller(OrderController::class)
         $route->get('/delete', 'delete')->name('deleteOrder');
     });
 
-//Route::controller(BlogController::class)
-//    ->prefix('blog')
-//    ->name('blog.')
-//    ->group(function ($route) {
-//        $route->get('/', 'index')->name('index');
-//        $route->get('/single', 'single')->name('singleBlog');
-//    });
+Route::controller(BlogController::class)
+    ->prefix('blog')
+    ->name('blog.')
+    ->group(function ($route) {
+        $route->get('/', 'index')->name('index');
+        $route->get('/{blogModel}', 'article')->name('article');
+    });
 
 
 //TODO:
