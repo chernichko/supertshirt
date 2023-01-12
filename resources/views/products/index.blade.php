@@ -23,7 +23,9 @@
                     <div class="row">
                         @each('products.include.list-item', $products, 'product')
                     </div>
-                    @include('products.include.pagination', $products)
+
+                    {{$products->links('products.include.pagination')}}
+
                 </div>
 
                 @include('products.include.sidebar-catalog')
