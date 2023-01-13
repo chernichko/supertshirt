@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class BlogModel extends Model
 {
@@ -12,8 +12,8 @@ class BlogModel extends Model
 
     protected $table = 'blog';
 
-    public function author(): BelongsTo
+    public function author()
     {
-        return $this->belongsTo(UserModel::class, 'user_id');
+        return $this->hasOne('App\Models\UserModel','id');
     }
 }

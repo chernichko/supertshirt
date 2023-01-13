@@ -44,4 +44,10 @@ class UserModel extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    public function article()
+    {
+        return $this->belongsTo('App\Models\BlogModel','user_id'); // links this->course_id to courses.id
+    }
+
 }
