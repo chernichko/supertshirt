@@ -37,6 +37,8 @@
                         agency, where they abused her for their.
                     </p>
                     <div class="row mt-4">
+                        <form method="post" action="{{route('cart.addCart')}}">
+                            {{csrf_field()}}
                         <div class="col-md-6">
                             <div class="form-group d-flex">
                                 <div class="select-wrap">
@@ -66,11 +68,14 @@
 	             	</span>
                         </div>
                         <div class="w-100"></div>
-                        <div class="col-md-12">
+                        <!-- <div class="col-md-12">
                             <p style="color: #000;">80 piece available</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <p><a href="cart.html" class="btn btn-black py-3 px-5">Add to Cart</a></p>
+                    <input type="hidden" name="product_id" value="{{ $product->id}}" >
+                    <input type="hidden" name="product_price" value="{{ $product->price}}" >
+                    <p><button class="btn btn-black py-3 px-5">Add to Cart</button></p>
+                    </form>
                 </div>
             </div>
         </div>

@@ -49,7 +49,7 @@ Route::controller(CartController::class)
     ->name('cart.')
     ->group(function ($route) {
         $route->get('/', 'index')->name('index');
-        $route->get('/add', 'add')->name('addCart');
+        $route->post('/add', 'add')->name('addCart');
         $route->get('/delete', 'delete')->name('deleteCart');
         $route->get('/create-order', 'createOrder')->name('createOrder');
     });
