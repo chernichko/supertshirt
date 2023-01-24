@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/template/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/template/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/template/style.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body class="goto-here">
 <div class="py-1 bg-black">
@@ -145,6 +146,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="{{ asset('js/template/google-map.js') }}"></script>
 <script src="{{ asset('js/template/main.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 </html>

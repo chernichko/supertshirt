@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Pagination\Paginator;
+use App\Http\Services\BasketService;
+use App\Interfaces\BasketInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(BasketInterface::class, function () {
+            return new BasketService();
+        });
     }
 
     /**

@@ -2,28 +2,42 @@
 
 namespace App\Http\Services;
 
-class BasketService
+use App\DTO\BasketItemDTO;
+use App\Interfaces\BasketInterface;
+use Illuminate\Support\Collection;
+
+class BasketService implements BasketInterface
 {
-    public function init(){
-        if(session()->missing('cart')){
-            session()->put('cart'); //???
+    public function __construct()
+    {
+        if (session()->missing('cart')) {
+            session()->put('cart', collect());
         }
     }
 
-    public function add(ProductModel $productModel){
+    public function getCartItems(): Collection
+    {
+        return session('cart', collect());
+    }
 
+    public function add(BasketItemDTO $basketItemDTO, int $quantity = 1): bool
+    {
+        $cartItems = $this->getCartItems();
 
-        dd($request->session());
+        $cartItems->add($basketItemDTO->get() + ['quantity' => $quantity]);
 
-        //datatransferobject
+        session()->put('cart', $cartItems);
+
+        return true;
+    }
+
+    public function update(string $cartItemId): bool
+    {
 
     }
 
-    public function update($idInCart){
-
-    }
-
-    public function delete($idInCart){
+    public function delete(string $cartItemId): bool
+    {
 
     }
 
