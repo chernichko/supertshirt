@@ -24,7 +24,7 @@ class ProductModelFactory extends Factory
             'name' => $this->faker->name(),
             'articul' => Str::random(10),
             'price' => random_int(500,1500),
-            'color' => $color[array_rand($color)],
+            'color' => $this->faker->colorName(),
             'size' => $size[array_rand($size)]
         ];
     }
