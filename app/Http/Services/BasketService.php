@@ -10,21 +10,20 @@ class BasketService
         }
     }
 
-    public static function add($request){
+    public function add(ProductModel $productModel){
 
-        session()->put('cart',[$request['product_id'] => ['price'=>$request['product_price'],'quantity'=>$request['quantity']]]);
 
         dd($request->session());
 
-
-
-    }
-
-    public static function update($idInCart){
+        //datatransferobject
 
     }
 
-    public static function delete($idInCart){
+    public function update($idInCart){
+
+    }
+
+    public function delete($idInCart){
 
     }
 

@@ -45,9 +45,9 @@ class UserModel extends Authenticatable
     ];
 
 
-    public function article()
+    public function articles()
     {
-        return $this->belongsTo('App\Models\BlogModel','user_id'); // links this->course_id to courses.id
+        return $this->hasMany('App\Models\BlogModel','user_id'); // links this->course_id to courses.id
     }
 
 }

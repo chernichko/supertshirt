@@ -14,6 +14,6 @@ class BlogModel extends Model
 
     public function author()
     {
-        return $this->hasOne('App\Models\UserModel','id');
+        return $this->belongsTo(UserModel::class);
     }
 }

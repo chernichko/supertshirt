@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\BasketService;
 use Illuminate\Http\Request;
+use App\Http\Models\ProductModel;
 
 class CartController extends Controller
 {
@@ -28,11 +29,10 @@ class CartController extends Controller
         return view('cart');
     }
 
-    public function add(BasketService $basketService, Request $request){
+    public function add(ProductModel $productModel, BasketService $basketService){
 
-        $basketService->add($request);
-
-        return redirect()->back();
+        $basketService->add($productModel);
+        
     }
 
 }

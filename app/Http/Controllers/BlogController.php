@@ -9,7 +9,9 @@ class BlogController extends Controller
 
     public function index()
     {
-        $articles = BlogModel::all();
+        $articles = BlogModel::with('author')->get();
+
+        // dd($articles);
 
         return view('blog.index', compact('articles'));
     }
