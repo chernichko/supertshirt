@@ -5,7 +5,7 @@
         <div class="text d-block pl-md-4">
             <div class="meta mb-3">
                 <div><a href="#">{{$article['created_at']->format('M d, Y')}}</a></div>
-                <div><a href="#">Admin</a></div>
+                <div><a href="#">{{$article['author']['name']}}</a></div>
                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
             </div>
             <h3 class="heading"><a href="{{route('blog.article', ['blogModel' => $article])}}">{{$article->title}}</a></h3>

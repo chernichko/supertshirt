@@ -199,42 +199,7 @@
 
                     <div class="sidebar-box ftco-animate">
                         <h3 CLASS="heading">Recent Blog</h3>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(/images/image_3.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading-1"><a href="#">Even the all-powerful Pointing has no control about
-                                        the blind texts</a></h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> April 09, 2019</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        @each('blog.include.recent-blog', $recentBlog, 'article')
                     </div>
 
                     <div class="sidebar-box ftco-animate">

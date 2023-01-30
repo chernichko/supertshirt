@@ -14,6 +14,6 @@ class BlogModel extends Model
 
     public function author()
     {
-        return $this->belongsTo(UserModel::class);
+        return $this->belongsTo(UserModel::class, 'user_id', 'id');
     }
 }
