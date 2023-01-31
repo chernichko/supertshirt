@@ -39,7 +39,7 @@ class ProductsController extends Controller
 
     public function product(ProductModel $productModel){
 
-
-        return view('products.product', ['product' => $productModel]);
+        $ralatedProducts = $productModel->get()->random(4);
+        return view('products.product', ['product' => $productModel,'ralatedProducts' => $ralatedProducts]);
     }
 }
